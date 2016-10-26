@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简单轮播插件</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#slider{
+				width: 1000px;
+				height: 150px;
+				margin: 50px auto;
+				border: 2px solid pink;
+				position: relative;
+			}
+			.slider_list{
+				font-size: 0;
+				line-height: 150px;
+				text-align: center;
+			}
+			.slider_list img{
+				display: inline-block;
+				width: 90%;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="slider" class="slider">
+			<div class="slider_list">
+				<!--<p style="font-size: 40px;text-align: center;">1</p>-->
+				<img src="img/cc.jpg"/>
+			</div>
+			<div class="slider_list">
+				<!--<p style="font-size: 40px;text-align: center;">2</p>-->
+				<img src="img/aa.jpg"/>
+			</div>
+			<div class="slider_list">
+				<!--<p style="font-size: 40px;text-align: center;">3</p>-->
+				<img src="img/e.jpg"/>
+			</div>
+			<div class="slider_list">
+				<!--<p style="font-size: 40px;text-align: center;">4</p>-->
+				<img src="img/ee.jpg"/>
+			</div>
+			<div class="slider_list">
+				<!--<p style="font-size: 40px;text-align: center;">5</p>-->
+				<img src="img/gg.jpg"/>
+			</div>
+			<div class="slider_list">
+				<!--<p style="font-size: 40px;text-align: center;">6</p>-->
+				<img src="img/j.jpg"/>
+			</div>
+			<div class="slider_list">
+				<!--<p style="font-size: 40px;text-align: center;">7</p>-->
+				<img src="img/k.jpg"/>
+			</div>
+			<div class="slider_list">
+				<!--<p style="font-size: 40px;text-align: center;">8</p>-->
+				<img src="img/a.jpg"/>
+			</div>
+		</div>
+		<!--<div class="slider_list">
+			<img src="img/a.jpg"/>
+		</div>-->
+	</body>
+<!--	<script src="jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="slider.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new slider({
+			box:"slider",
+			img_num:4,//显示多少张图片
+			img_lb:4,//每次滚动多少张
+			timer:1000,//自动滚动事件间隔
+			auto:false,//是否自动滚动
+			spot:true,//是否显示点
+			arrow:true//是否显示左右箭头
+		});
+//		console.log(document.getElementsByClassName("slider"))
+//		console.log($(".slider_list"))
+//		$(".slider_list").css({//jq不需要遍历
+//			"width":"100"
+//		})
+	</script>
+</html>
